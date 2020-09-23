@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="index.css" />
+		<title>Markdown Basics</title>
+	</head>
+	<body>
+		<nav id="navbar">
+			<header id="nav-header">Markdown Basics</header>
+			<hr id="header-rule" />
+			<a href="#Introduction" class="nav-link">Introduction</a>
+			<a href="#Headings" class="nav-link">Headings</a>
+			<a href="#Links" class="nav-link">Links</a>
+			<a href="#Images" class="nav-link">Images</a>
+			<a href="#Lists" class="nav-link">Lists</a>
+			<a href="#Tables" class="nav-link">Tables</a>
+			<a href="#Extended_Features" class="nav-link">Extended Features</a>
+		</nav>
+		<main id="main-doc">
+			<section id="Introduction" class="main-section">
+				<header>Introduction</header>
+				<article>
+					<p>
+						Markdown is a lightweight markup language that you can use to
+						add formatting elements to plaintext text documents. Created
+						by John Gruber in 2004, Markdown is now one of the world’s
+						most popular markup languages.
+					</p>
+					<p>
+						Using Markdown is different than using a WYSIWYG editor. In an
+						application like Microsoft Word, you click buttons to format
+						words and phrases, and the changes are visible immediately.
+						Markdown isn’t like that. When you create a Markdown-formatted
+						file, you add Markdown syntax to the text to indicate which
+						words and phrases should look different.
+					</p>
+					<p>
+						For instance, to denote a heading, you add a number sign
+						before it (e.g., # Heading One). Or to make a phrase bold, you
+						add two asterisks before and after it (e.g., **this text is
+						bold**). It may take a while to get used to seeing Markdown
+						syntax in your text, especially if you’re accustomed to
+						WYSIWYG applications.
+					</p>
+				</article>
+			</section>
+			<section id="Headings" class="main-section">
+				<header>Headings</header>
+				<article>
+					<p>
+						To create a heading, add number signs (#) in front of a word
+						or phrase. The number of number signs you use should
+						correspond to the heading level. For example, to create a
+						heading level three (&lt;h3&gt;), use three number signs
+						(e.g., ### My Header).
+					</p>
+					<table>
+						<thead>
+							<th>Markdown</th>
+							<th>HTML</th>
+							<th>Rendered Output</th>
+						</thead>
+						<tr>
+							<td># Heading Level 1</td>
+							<td>&lt;h1&gt;Heading level 1 &lt;/h1&gt;</td>
+							<td id="mock-h1">Heading Level 1</td>
+						</tr>
+						<tr>
+							<td># Heading Level 2</td>
+							<td>&lt;h2&gt;Heading level 2 &lt;/h2&gt;</td>
+							<td id="mock-h2">Heading Level 2</td>
+						</tr>
+						<tr>
+							<td># Heading Level 3</td>
+							<td>&lt;h3&gt;Heading level 3 &lt;/h3&gt;</td>
+							<td id="mock-h3">Heading Level 3</td>
+						</tr>
+						<tr>
+							<td># Heading Level 4</td>
+							<td>&lt;h4&gt;Heading level 4 &lt;/h4&gt;</td>
+							<td id="mock-h4">Heading Level 4</td>
+						</tr>
+						<tr>
+							<td># Heading Level 5</td>
+							<td>&lt;h5&gt;Heading level 5 &lt;/h5&gt;</td>
+							<td id="mock-h5">Heading Level 5</td>
+						</tr>
+						<tr>
+							<td># Heading Level 6</td>
+							<td>&lt;h6&gt;Heading level 6 &lt;/h6&gt;</td>
+							<td id="mock-h6">Heading Level 6</td>
+						</tr>
+					</table>
+				</article>
+			</section>
+			<section id="Links" class="main-section">
+				<header>Links</header>
+				<article>
+					<p>
+						To create a link, enclose the link text in brackets (e.g.,
+						<code>[Duck Duck Go]</code>) and then follow it immediately
+						with the URL in parentheses (e.g., (https://duckduckgo.com)).
+					</p>
+					<p>
+						So your markdown text would look like this
+						<code>[Duck Duck Go](https://duckduckgo.com)</code>
+					</p>
+					<p>
+						The rendered output would look like this:
+						<a href="https://duckduckgo.com">Duck Duck Go</a>
+					</p>
+				</article>
+			</section>
+			<section id="Images" class="main-section">
+				<header>Images</header>
+				<article>
+					<p>
+						To add an image, add an exclamation mark <code>(!)</code>,
+						followed by alt text in brackets, and the path or URL to the
+						image asset in parentheses. You can optionally add a title
+						after the URL in the parentheses.
+					</p>
+					<p>For Example:</p>
+					<p>
+						<code>
+							![Philadelphia's Magic Gardens. This place was so
+							cool!](/assets/images/philly-magic-gardens.jpg
+							"Philadelphia's Magic Gardens")
+                  </code>
+					</p>
+               <p>Will render the output below</p>
+               <img id="img-example" src="./philly-magic-garden.jpg" alt="Philadelphia Magic Gardens">
+				</article>
+			</section>
+			<section id="Lists" class="main-section">
+				<header>Lists</header>
+				<article>
+					<p></p>
+					<code></code>
+					<p></p>
+					<p></p>
+				</article>
+			</section>
+			<section id="Tables" class="main-section">
+				<header>Tables</header>
+				<article>
+					<p></p>
+					<code></code>
+					<p></p>
+					<p></p>
+				</article>
+			</section>
+			<section id="Extended_Features" class="main-section">
+				<header>Extended Features</header>
+				<article>
+					<p></p>
+					<code></code>
+					<p></p>
+					<p></p>
+				</article>
+			</section>
+		</main>
+
+		<script src="index.js"></script>
+		<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	</body>
+</html>
+
+<!-- 
+   
+   //User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
+
+//User Story #2: Within the #main-doc element, I can see several section elements, each with a class of main-section. There should be a minimum of 5.
+
+//User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.
+
+//User Story #4: Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java").
+
+//User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
+
+//User Story #6: The .main-section elements should contain at least 5 code elements total (not each).
+
+//User Story #7: The .main-section elements should contain at least 5 li items total (not each).
+
+//User Story #8: I can see a nav element with a corresponding id="navbar".
+
+//User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation.
+
+//User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section.
+
+//User Story #11: The header element in the navbar must come before any link (a) elements in the navbar.
+
+//User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section /(e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world").
+
+User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
+
+User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
+
+User Story #15: My Technical Documentation page should use at least one media query. -->

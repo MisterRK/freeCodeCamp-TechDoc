@@ -1,0 +1,84 @@
+* {
+   font-family: 'Oxygen', sans-serif
+}
+#main-doc {
+   position: absolute;
+   margin-left: 300px;
+   padding: 1%;
+}
+
+nav {
+   position: fixed;
+   top: 0px;
+   left: 0px;
+   width: 300px;
+   height: 100%;
+   border-right: solid 3px #2D303E;
+   display: flex;
+   flex-direction: column;
+   background-color: #2D303E;
+}
+
+article {
+   width: 85%;
+}
+
+header {
+   font-size: 24px;
+}
+#nav-header {
+   color: white;
+   text-align: center;
+}
+#header-rule {
+   color: white;
+   width: 75%;
+}
+
+.nav-link {
+   text-decoration: none;
+   color: white;
+   font-size: 16px;
+   text-align: center;
+   margin-top: 8%;
+}
+table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 10px;
+}
+table {
+   margin-top: 4%;
+   margin-bottom: 4%;
+}
+thead {
+   background-color: rgb(141, 174, 175);
+}
+#mock-h1 {
+   font-size: 2em;
+   font-weight: bolder;
+}
+#mock-h2 {
+   font-size: 1.5em;
+   font-weight: bolder;
+}
+#mock-h3 {
+   font-size: 1.17em;
+   font-weight: bolder;
+}
+#mock-h4 {
+   font-size: 1em;
+   font-weight: bolder;
+}
+#mock-h5 {
+   font-size: 0.83em;
+   font-weight: bolder;
+}
+#mock-h6 {
+   font-size: 0.75em;
+   font-weight: bolder;
+}
+code {
+   font-weight: 700;
+}
+
