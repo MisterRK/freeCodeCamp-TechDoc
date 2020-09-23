@@ -8,6 +8,10 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="index.css" />
+		<style>@media(max-width: 500px){#main-doc {
+			margin-top: 175px;
+			margin-left: 0;
+		}};</style>
 		<title>Markdown Basics</title>
 	</head>
 	<body>
@@ -19,12 +23,13 @@
 			<a href="#Links" class="nav-link">Links</a>
 			<a href="#Images" class="nav-link">Images</a>
 			<a href="#Lists" class="nav-link">Lists</a>
-			<a href="#Tables" class="nav-link">Tables</a>
-			<a href="#Extended_Features" class="nav-link">Extended Features</a>
+			<a href="#Code" class="nav-link">Code</a>
+			
 		</nav>
 		<main id="main-doc">
-			<section id="Introduction" class="main-section">
-				<header>Introduction</header>
+			<section id=Introduction class="main-section">
+				<header class="target-header">Introduction</header>
+				<a></a>
 				<article>
 					<p>
 						Markdown is a lightweight markup language that you can use to
@@ -41,10 +46,10 @@
 						words and phrases should look different.
 					</p>
 					<p>
-						For instance, to denote a heading, you add a number sign
-						before it (e.g., # Heading One). Or to make a phrase bold, you
-						add two asterisks before and after it (e.g., **this text is
-						bold**). It may take a while to get used to seeing Markdown
+						For instance, to denote a heading, you add a number sign 
+						before it (e.g.,<code># Heading One</code> ). Or to make a phrase bold, you
+						add two asterisks before and after it (e.g., <code>**this text is
+                     bold**</code>). It may take a while to get used to seeing Markdown
 						syntax in your text, especially if you’re accustomed to
 						WYSIWYG applications.
 					</p>
@@ -57,8 +62,7 @@
 						To create a heading, add number signs (#) in front of a word
 						or phrase. The number of number signs you use should
 						correspond to the heading level. For example, to create a
-						heading level three (&lt;h3&gt;), use three number signs
-						(e.g., ### My Header).
+						heading level three <code>&lt;h3&gt;</code>, use three number signs <code>### My Header</code>
 					</p>
 					<table>
 						<thead>
@@ -121,10 +125,10 @@
 				<header>Images</header>
 				<article>
 					<p>
-						To add an image, add an exclamation mark <code>(!)</code>,
-						followed by alt text in brackets, and the path or URL to the
-						image asset in parentheses. You can optionally add a title
-						after the URL in the parentheses.
+						To add an image, add an exclamation mark (!), followed by alt
+						text in brackets, and the path or URL to the image asset in
+						parentheses. You can optionally add a title after the URL in
+						the parentheses.
 					</p>
 					<p>For Example:</p>
 					<p>
@@ -132,37 +136,160 @@
 							![Philadelphia's Magic Gardens. This place was so
 							cool!](/assets/images/philly-magic-gardens.jpg
 							"Philadelphia's Magic Gardens")
-                  </code>
+						</code>
 					</p>
-               <p>Will render the output below</p>
-               <img id="img-example" src="./philly-magic-garden.jpg" alt="Philadelphia Magic Gardens">
+					<p>Will render the output below</p>
+					<img
+						id="img-example"
+						src="./philly-magic-garden.jpg"
+						alt="Philadelphia Magic Gardens"
+					/>
 				</article>
 			</section>
-			<section id="Lists" class="main-section">
+			<section id='Lists' class="main-section">
 				<header>Lists</header>
+				<h4>Ordered Lists</h4>
 				<article>
-					<p></p>
-					<code></code>
-					<p></p>
-					<p></p>
+					<p>
+						To create an ordered list, add line items with numbers
+						followed by periods. The numbers don’t have to be in numerical
+						order, but the list should start with the number one. Indent
+						one or more items to create a nested list.
+					</p>
+					<table>
+						<tr>
+							<th>Markdown</th>
+							<th>HTML</th>
+							<th>Rendered Output</th>
+						</tr>
+						<tr>
+							<td>
+								<ol>
+									<li>First item</li>
+									<li>Second item</li>
+									<li>Third item</li>
+									<li>Fourth item</li>
+								</ol>
+							</td>
+							<td>
+								&lt;ol&gt; <br />
+								&lt;li&gt;First item&lt;/li&gt;<br />
+								&lt;li&gt;Second item&lt;/li&gt; <br />
+								&lt;li&gt;Thirditem&lt;/li&gt; <br />
+								&lt;li&gt;Fourth item&lt;/li&gt;<br />
+								&lt;/ol&gt;<br />
+							</td>
+							<td>
+								1.First item <br />
+								2.Second item <br />
+								3.Third item <br />
+								4.Fourth item <br />
+							</td>
+						</tr>
+						<tr>
+							<td>
+									1. First item <br />
+									1. Second item <br />
+									1. Third item <br />
+									1. Fourth item <br />
+                        </td>
+							<td>
+								&lt;ol&gt; <br />
+								&lt;li&gt;First item&lt;/li&gt;<br />
+								&lt;li&gt;Second item&lt;/li&gt; <br />
+								&lt;li&gt;Thirditem&lt;/li&gt; <br />
+								&lt;li&gt;Fourth item&lt;/li&gt;<br />
+								&lt;/ol&gt;<br />
+							</td>
+							<td>
+								1.First item <br />
+								2.Second item <br />
+								3.Third item <br />
+								4.Fourth item <br />
+							</td>
+						</tr>
+					</table>
+				</article>
+				<h4>Unordered Lists</h4>
+				<article>
+					<p>
+						To create an unordered list, add dashes (-), asterisks (*), or
+						plus signs (+) in front of line items. Indent one or more
+						items to create a nested list.
+					</p>
+					<table>
+                  <tr>
+                     <th>Markdown</th>
+                     <th>HTML</th>
+                     <th>Rendered Output</th>
+                  </tr>
+                  <tr>
+                     <td>
+                        - First Item <br>
+                        - Second Item <br>
+                        - Third Item <br>
+                        - Fourth Item <br>
+                     </td>
+                     <td>
+                        &lt;ul&gt; <br />
+								&lt;li&gt;First item&lt;/li&gt;<br />
+								&lt;li&gt;Second item&lt;/li&gt; <br />
+								&lt;li&gt;Thirditem&lt;/li&gt; <br />
+								&lt;li&gt;Fourth item&lt;/li&gt;<br />
+								&lt;/ul&gt;<br />
+                     </td>
+                     <td>
+                        <ul>
+                           <li>First Item</li>
+                           <li>Second Item</li>
+                           <li>Third Item</li>
+                           <li>Fourth Item</li>
+                        </ul>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        * First Item <br>
+                        * Second Item <br>
+                        * Third Item <br>
+                        * Fourth Item <br>
+                     </td>
+                     <td>
+                        &lt;ul&gt; <br />
+								&lt;li&gt;First item&lt;/li&gt;<br />
+								&lt;li&gt;Second item&lt;/li&gt; <br />
+								&lt;li&gt;Thirditem&lt;/li&gt; <br />
+								&lt;li&gt;Fourth item&lt;/li&gt;<br />
+								&lt;/ul&gt;<br />
+                     </td>
+                     <td>
+                        <ul>
+                           <li>First Item</li>
+                           <li>Second Item</li>
+                           <li>Third Item</li>
+                           <li>Fourth Item</li>
+                        </ul>
+                     </td>
+                  </tr>
+					</table>
 				</article>
 			</section>
-			<section id="Tables" class="main-section">
-				<header>Tables</header>
+			<section id="Code" class="main-section">
+				<header>Code</header>
 				<article>
-					<p></p>
-					<code></code>
-					<p></p>
-					<p></p>
-				</article>
-			</section>
-			<section id="Extended_Features" class="main-section">
-				<header>Extended Features</header>
-				<article>
-					<p></p>
-					<code></code>
-					<p></p>
-					<p></p>
+               <p>To denote a word or phrase as code, enclose it in backticks (`).</p>
+               <table>
+                  <tr>
+                     <th>Markdown</th>
+                     <th>HTML</th>
+                     <th>Rendered Output</th>
+                  </tr>
+                  <tr>
+                     <td>At the command prompt type `nano`</td>
+                     <td>At the command prompt type &lt;code&gt;nano&lt;/code&gt;</td>
+                     <td>At the command prompt, type <code>nano</code></td>
+                  </tr>
+               </table>
 				</article>
 			</section>
 		</main>
